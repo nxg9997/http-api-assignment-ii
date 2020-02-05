@@ -12,14 +12,14 @@
 <body>
   <section id="top">
     <h3>POST Status Code Tests</h3>
-    <form id="nameForm" action="/addUser" method="post">
+    <div id="nameForm">
       <label for="name">Name: </label>
       <input id="nameField" type="text" name="name" />
       <label for="age">Age: </label>
       <input id="ageField" type="number" name="age" min="0" max="100" step="1"/>
-      <input type="submit" value="Add User" />
-    </form>
-    <form id="userForm" action="/getUsers" method="get">
+      <input type="submit" value="Add User" id="addUser"/>
+    </div>
+    <div id="userForm">
       <select id='urlField'>
         <option value='/getUsers'>/getUsers</option>
         <option value='/notReal'>/notReal</option>
@@ -28,10 +28,13 @@
         <option value="get">GET</option>
         <option value="head">HEAD</option>
       </select>
-      <input type="submit" value="Get User" />
-    </form>
+      <input type="submit" value="Get User" id="getUser"/>
+    </div>
   </section>
   <section id="content">
+    <h2 id="resCode"></h2>
+    <p id="resMessage"></p>
   </section>
 </body>
+<script src='client.js'></script>
 </html>
